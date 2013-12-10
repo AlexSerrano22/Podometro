@@ -1,0 +1,79 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+
+   	<TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@+id/vx"
+        android:id="@+id/txtAccX"
+        />
+
+    <TextView
+        android:id="@+id/txtAccZ"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="106dp"
+        android:text="@+id/vz" />
+
+    <TextView
+        android:id="@+id/txtAccY"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/txtAccZ"
+        android:layout_alignLeft="@+id/txtAccZ"
+        android:layout_marginBottom="48dp"
+        android:text="@+id/vy" />
+
+    <TextView
+        android:id="@+id/txtAcc"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtAccZ"
+        android:layout_below="@+id/txtAccZ"
+        android:layout_marginTop="36dp" />
+
+    <TextView
+        android:id="@+id/txtAc"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtAccZ"
+        android:layout_below="@+id/txtAccZ"
+        android:layout_marginTop="80dp" />
+
+    <SeekBar
+        android:id="@+id/seekBar1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/txtAc"
+        android:layout_marginTop="73dp" />
+
+    <TextView
+        android:id="@+id/valor1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/seekBar1"
+        android:layout_below="@+id/seekBar1"
+        android:layout_marginTop="29dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/valor2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/valor1"
+        android:layout_alignBottom="@+id/valor1"
+        android:layout_alignRight="@+id/seekBar1"
+        android:layout_marginRight="83dp"
+        android:text="TextView" />
+
+</RelativeLayout>
