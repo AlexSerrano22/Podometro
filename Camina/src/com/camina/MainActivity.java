@@ -17,8 +17,9 @@ import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.widget.TextView;
 import android.widget.Toast;
 
+
 public class MainActivity extends Activity implements SensorEventListener{
-	
+	float d ;	
 	//private long last_update = 0, last_movement = 0;
 //	private float prevX = 0, prevY = 0, prevZ = 0;
 	private float X = 0, Y = 0, Z = 0 ,X1 = 0, Y1 = 0, Z1 = 0 ;
@@ -30,28 +31,10 @@ public class MainActivity extends Activity implements SensorEventListener{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
-		final SeekBar seek=(SeekBar) findViewById(R.id.seekBar1);
+		d = getIntent().getFloatExtra("ds",dsx);
 		
-		seek.setOnSeekBarChangeListener(new OnSeekBarChangeListener() {
-
-		    @Override
-		    public void onStopTrackingTouch(SeekBar seekBar) {
-		        // TODO Auto-generated method stub
-		    }
-
-		    @Override
-		    public void onStartTrackingTouch(SeekBar seekBar) {
-		        // TODO Auto-generated method stub
-		    }
-
-		    @Override
-		    public void onProgressChanged(SeekBar seekBar, int progress,boolean fromUser) {
-		        // TODO Auto-generated method stub
-		        p=progress/10;
-		           ((TextView) findViewById(R.id.valor1)).setText("sensibilidad: " + p);
-
-		    }
-		});
+		Log.d("valor", ""+d);
+		
 		
 		
 	}
@@ -90,6 +73,7 @@ final float alpha = (float) 0.8;
 float[] gravity = new float[3];
 float k = (float) 0.35;
 float tx = 0,ty = 0,tz = 0;
+
 
 	public float mediaMovilx(float V){
 		
@@ -264,30 +248,18 @@ public float mediaMovilz(float V){
 	                	u++;
 		                
 		                if(u==1200 ){
-		                	mediax = (float) media(fx,fy,0,1200); 
 		                	
-		                	dsx = (float) DS(fx,fy,0,1200,mediax);
-		                	
-		                	//xy = suma(fx,fy,0,1999);
-		                	
-		                	dsx -= (dsx*p/10);
-		                	
-		                	pasos+= flatp(fx,fy,0,1199,dsx);
+		                	pasos+= flatp(fx,fy,0,1199,d);
 		                	
 		                }
 		                if(u == 2400){
 		                	//procesa 1200 a 2399
 		                	u=0;
 		                	
-		                	mediax = (float) media(fx,fy,1200,2399); 
-		                	
-		                	dsx = (float) DS(fx,fy,1200,2399,mediax);
-		                	
-		                	dsx -= (dsx*p/10);
 		                	
 		                
 		                	
-		                	pasos+= flatp(fx,fy,1200,2399,dsx);
+		                	pasos+= flatp(fx,fy,1200,2399,d);
 		                	
 		                }
 		                

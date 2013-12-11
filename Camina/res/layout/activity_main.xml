@@ -8,12 +8,11 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity" >
 
-   	<TextView
+    <TextView
+        android:id="@+id/txtAccX"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="@+id/vx"
-        android:id="@+id/txtAccX"
-        />
+        android:text="@+id/vx" />
 
     <TextView
         android:id="@+id/txtAccZ"
@@ -49,31 +48,23 @@
         android:layout_below="@+id/txtAccZ"
         android:layout_marginTop="80dp" />
 
-    <SeekBar
-        android:id="@+id/seekBar1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/txtAc"
-        android:layout_marginTop="73dp" />
-
-    <TextView
-        android:id="@+id/valor1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/seekBar1"
-        android:layout_below="@+id/seekBar1"
-        android:layout_marginTop="29dp"
-        android:text="TextView" />
-
     <TextView
         android:id="@+id/valor2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/valor1"
         android:layout_alignBottom="@+id/valor1"
-        android:layout_alignRight="@+id/seekBar1"
         android:layout_marginRight="83dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/valor1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/txtAc"
+        android:layout_below="@+id/txtAc"
+        android:layout_marginRight="74dp"
+        android:layout_marginTop="62dp"
         android:text="TextView" />
 
 </RelativeLayout>

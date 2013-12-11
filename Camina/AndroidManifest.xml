@@ -17,6 +17,13 @@
         <activity
             android:name="com.camina.MainActivity"
             android:label="@string/app_name" >
+            
+        </activity>
+        
+        <activity android:name="com.camina.calibrar"
+            android:label="Calibrar"
+            
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
